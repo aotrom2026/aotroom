@@ -1,5 +1,6 @@
 const characters = [
   { number: '01', title: 'каузация', label: 'персонаж', action: 'войти', href: 'kauzatsiya/' },
+  { number: '02', title: 'ALYA', label: 'персонаж', action: 'войти', href: 'alya/' },
 ];
 
 const releaseList = document.querySelector('#release-list');
