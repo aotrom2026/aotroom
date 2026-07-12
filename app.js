@@ -1,6 +1,7 @@
 const characters = [
   { number: '01', title: 'каузация', label: 'персонаж', action: 'войти', href: 'kauzatsiya/' },
   { number: '02', title: 'ALYA', label: 'персонаж', action: 'войти', href: 'alya/' },
+  { number: '03', title: 'Виктория Соломахина', label: 'персонаж', action: 'войти', href: 'viktoriya-solomakhina/' },
 ];
 
 const releaseList = document.querySelector('#release-list');
