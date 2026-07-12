@@ -1,16 +1,14 @@
-const releases = [
-  { year: '2026', title: 'новая музыка', status: 'скоро' },
-  { year: '2026', title: 'неизданное', status: 'скоро' },
-  { year: '2025', title: 'архив', status: 'скоро' },
+const characters = [
+  { number: '01', title: 'каузация', label: 'персонаж', action: 'войти', href: 'kauzatsiya/' },
 ];
 
 const releaseList = document.querySelector('#release-list');
 
-releaseList.innerHTML = releases.map(({ year, title, status }, index) => `
+releaseList.innerHTML = characters.map(({ number, title, label, action, href }) => `
   <article class="release">
-    <span class="release__number">${String(index + 1).padStart(2, '0')}</span>
+    <span class="release__number">${number}</span>
     <h3 class="release__title">${title}</h3>
-    <span class="release__year">${year}</span>
-    <span class="release__status">${status}</span>
+    <span class="release__year">${label}</span>
+    <a class="release__status" href="${href}">${action} <span aria-hidden="true">↗</span></a>
   </article>
 `).join('');
