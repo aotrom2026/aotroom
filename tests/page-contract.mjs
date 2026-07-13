@@ -11,7 +11,7 @@ for (const id of ['hero', 'about', 'releases', 'contact']) {
 assert.match(html, /assets\/hero-mobile\.jpg/);
 assert.match(html, /assets\/hero-desktop\.jpg/);
 assert.match(html, /class=["']mark["'][^>]*>\s*<img src=["']assets\/aotrom-logo\.png["']/);
-assert.match(html, /class=["']author__wordmark["'] src=["']assets\/aotrom-logo\.png["']/);
+assert.doesNotMatch(html, /author__wordmark/);
 assert.match(html, /class=["']footer__logo["'] src=["']assets\/aotrom-logo\.png["']/);
 assert.doesNotMatch(html, /assets\/logo-(main|small)\.png/);
 assert.doesNotMatch(html, />aot<br>room</);

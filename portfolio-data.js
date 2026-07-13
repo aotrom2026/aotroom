@@ -105,7 +105,7 @@ export const portfolioGroups = [
       link('Елизавета Качурак — Я тебя рисую', 'https://www.1tv.ru/-/lrzwdr'),
       link('Голос 12 — Поединки, 15.03.2024', 'https://www.1tv.ru/-/dxceoo'),
       link('Голос 12 — Поединки, 22.03.2024', 'https://www.1tv.ru/-/tercbf'),
-      link('Голос 12 — Четвертьфинал, 12.04.2024', 'https://www.1tv.ru/-/jvwpcu'),
+      link('Алина — Больно', 'https://www.1tv.ru/shows/golos-12/vypuski/chetvertfinal-golos-12-vypusk-ot-12-04-2024'),
       link('Владимир Гринченко и Алон Низамов — Свободна', 'https://1tv.ru/-/mbqbkf'),
       link('Валерия Асонова и Юрий Курнаков — Если ты когда-нибудь меня простишь', 'https://1tv.ru/-/cvbljs'),
       link('Валентина Яньшина — Метелица', 'https://www.1tv.ru/shows/golos-13/vystupleniya/valentina-yanshina-metelica-nokauty-golos-vypusk-ot-04-04-2025'),
