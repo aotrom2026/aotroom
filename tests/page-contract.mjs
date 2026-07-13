@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
 const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+const app = await readFile(new URL('../app.js', import.meta.url), 'utf8');
 
 for (const id of ['hero', 'about', 'releases', 'contact']) {
   assert.match(html, new RegExp(`id=["']${id}["']`));
@@ -19,4 +20,8 @@ assert.doesNotMatch(html, /assets\/gallery\/img-0528\.jpg/);
 assert.match(html, /<title>aotrom — музыка автора<\/title>/);
 assert.match(html, /<source media=["']\(max-width: 700px\)["'] srcset=["']assets\/hero-mobile\.jpg["']/);
 assert.doesNotMatch(html, /telegram-peer-photo-size|telegram-cloud-photo-size/);
+assert.match(html, /id=["']portfolio["']/);
+assert.match(app, /class="artist-row"/);
+assert.match(app, /class="artist-row__type"/);
+assert.match(app, /class="portfolio-group"/);
 console.log('page contract passes');

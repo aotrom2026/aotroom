@@ -133,6 +133,38 @@ a:focus-visible {
 
 .release-list { border-top: 1px solid var(--rule); }
 
+.artist-list { border-top: 1px solid var(--rule); }
+
+.artist-row {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 1.15fr;
+  align-items: baseline;
+  gap: 24px;
+  min-height: clamp(128px, 13vw, 218px);
+  padding: 22px 0;
+  border-bottom: 1px solid var(--rule);
+  transition: background-color 180ms ease, padding 180ms ease;
+}
+
+.artist-row:hover { padding-inline: 14px; background: #e8e8e3; }
+.artist-row__number, .artist-row__type, .artist-row__action { font-size: clamp(13px, 1.2vw, 18px); }
+.artist-row__title { margin: 0; font-size: clamp(31px, 4.6vw, 78px); font-weight: 400; line-height: .85; letter-spacing: -.08em; }
+.artist-row__action { text-align: right; }
+
+.portfolio { padding-top: clamp(120px, 16vw, 250px); }
+.portfolio__intro { display: grid; grid-template-columns: 1fr 2fr; gap: 32px; margin-bottom: clamp(70px, 10vw, 150px); }
+.portfolio__intro h2 { max-width: 900px; margin: 0; font-size: clamp(60px, 9vw, 156px); font-weight: 400; line-height: .78; letter-spacing: -.09em; }
+.portfolio-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(44px, 7vw, 110px) clamp(28px, 5vw, 90px); }
+.portfolio-group { border-top: 1px solid var(--rule); }
+.portfolio-group__heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 14px 0 30px; }
+.portfolio-group__heading h3 { margin: 0; font-size: clamp(28px, 3.4vw, 56px); font-weight: 400; line-height: .86; letter-spacing: -.07em; }
+.portfolio-group__heading span { font-size: 13px; }
+.portfolio-group__links { margin: 0; padding: 0; list-style: none; }
+.portfolio-group__links li { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 10px; padding: 12px 0; border-top: 1px solid rgba(16, 16, 15, .15); font-size: clamp(15px, 1.45vw, 21px); line-height: 1; }
+.portfolio-group__links li > span { padding-top: 2px; font-size: 12px; }
+.portfolio-group__links a { display: flex; justify-content: space-between; gap: 16px; }
+.portfolio-group__links em { flex: 0 0 auto; font-size: 12px; font-style: normal; }
+
 .release {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr 1.15fr;
@@ -266,6 +298,13 @@ a:focus-visible {
   .release__year { display: none; }
   .release__status { grid-column: 3; }
   .release__title { font-size: clamp(34px, 10.4vw, 52px); }
+  .artist-row { grid-template-columns: 30px minmax(0, 1fr) 54px; gap: 8px; min-height: 105px; }
+  .artist-row__type { display: none; }
+  .artist-row__action { grid-column: 3; }
+  .artist-row__title { font-size: clamp(34px, 10.4vw, 52px); }
+  .portfolio__intro { grid-template-columns: 1fr; }
+  .portfolio-groups { grid-template-columns: 1fr; }
+  .portfolio-group__links a { align-items: baseline; }
   .people-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 14px; }
   .person-card:nth-child(2) .polaroid { margin-top: 32px; }
   .polaroid figcaption strong { font-size: clamp(16px, 4.7vw, 21px); }
